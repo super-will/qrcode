@@ -1,4 +1,4 @@
-package com.superWill.qrcode;
+package com.superwill.qrcode;
 
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
@@ -46,7 +46,7 @@ public class QRcodeGenerater
 			BitMatrix bitmatrix = new MultiFormatWriter().encode(content, BarcodeFormat.QR_CODE, width, height, hints);
 			Path pathWrite = FileSystems.getDefault().getPath(path, fileName);
 			MatrixToImageWriter.writeToPath(bitmatrix, format, pathWrite);// 输出图像  
-    	    System.out.println("输出成功");
+    	    System.out.println("输出图片至路径:"+path+"/"+fileName);
     	} catch (Exception e) {
 			e.printStackTrace();
 		}
